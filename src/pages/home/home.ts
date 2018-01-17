@@ -11,4 +11,9 @@ export class HomePage {
 
   }
 
+  segment = "first";
+
+  gotoHome2() {
+    this.navCtrl.push('HomeTwoPage');
+  }
 }

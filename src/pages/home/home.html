@@ -1,14 +1,39 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home Page
     </ion-title>
   </ion-navbar>
+
+
+
+  <ion-segment mode="md" [(ngModel)]="segment">
+    <ion-segment-button value="first">
+      First
+
+    </ion-segment-button>
+    <ion-segment-button value="second">
+      Second
+    </ion-segment-button>
+  </ion-segment>
+
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+  <div *ngIf="segment === 'first'">
+    <h3>This is the FIRST segment, HomePage</h3>
+  </div>
+
+  <div *ngIf="segment === 'second'">
+    <h3>This is the SECOND segment, HomePage</h3>
+  </div>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button full clear ion-button (click)="gotoHome2()">Goto home 2</button>
+  </ion-toolbar>
+</ion-footer>

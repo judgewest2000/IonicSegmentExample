@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Home Page Two
+      </ion-title>
+    </ion-navbar>
+  
+  
+  
+    <ion-segment mode="md" [(ngModel)]="segment">
+      <ion-segment-button value="first">
+        First
+  
+      </ion-segment-button>
+      <ion-segment-button value="second">
+        Second
+      </ion-segment-button>
+    </ion-segment>
+  
+  </ion-header>
+  
+  <ion-content padding>
+  
+  
+    <div *ngIf="segment === 'first'">
+      <h3>This is the FIRST segment, HomePage Two</h3>
+    </div>
+  
+    <div *ngIf="segment === 'second'">
+      <h3>This is the SECOND segment, HomePage Two</h3>
+    </div>
+  
+  </ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+      <button full clear ion-button (click)="gotoHome()">This is a button</button>
+    </ion-toolbar>
+  </ion-footer>
